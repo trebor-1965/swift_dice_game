@@ -1,0 +1,171 @@
+Robert N. Brown III
+MyCraps game
+
+Platform: IOS
+Category: Game
+Language: swift version 2
+Level: Entertainment
+
+Description: This is an IOS game of craps a popular and somewhat complicated dice game when
+played in the casino. The first version will be designed to just get the game out and let
+users have fun. I would like to eventually add multi user and a teaching mode for people 
+who want to learn how to play "casino" craps. 
+
+Things to do.
+1. Roll two dice, each a standard 6 sided die. Generate random number on each die. The combined
+   total of the two dice will add up to 2 to 12. That sum will be used to determine if the 
+   user wins or loses. They will be paid simulated money.
+   
+2. User interface will include a representation of 1/2 of a craps table. All they user to 
+   touch the screen to select the amount to bet, what to bet and roll the dice. Need to 
+   simulate two dice rolling and display the result with a graphic that represents the number
+   that was rolled. Also have popup messages to indicate to the user if they won or lost and
+   the amount that they won. Need representation of the users cash (start with some base 
+   amount) Store amount in Game Center info. If they get to zero reset and allow them to 
+   start over at initial amount. Keep track of winnings so that the user can come back to 
+   where they left off.
+   
+3. Betting - to start the game (round) the user has to have a Pass line or don't pass line
+   bet. Your first roll, the come out roll, will establish your point. The users point can 
+   be 4,5,6,8,9, or 10. On the come out roll you win immediately on a 7 or 11, you lose on 
+   a 2,3, or 12. 
+	Pass Line bets - This bet says that you are betting that you will roll the number you 
+	                 get (your point) before you roll a seven.
+	               - has to be minium table stakes $5, $10 etc ....
+	               - pass line bets are even money. So if you bet $5 you win $5
+	               - User can place odds which get paid more money based on the point and
+	                 the amount bet. Odds bets are placed directly behind the pass line bet.
+	                 
+	Don't pass line bet - This bet says that you will roll a seven before you roll your point. 
+	               		- has to be minium table stakes $5, $10 ....
+	               		- dont pass line bets are even money. So if you bet $5 you win $5
+	               		- User can place odds which get paid more money based on the point
+	               		  and the amount bet. Odds for the don't pass are calculated differently
+	               		  than odds for pass line bets.  Odds bets are placed directly 
+	               		  behind the pass line bet.
+	                 
+	Place bets - have to be table minium ie $5, $10 etc ...
+			   - Usually done after the point has been established, but can be bet before
+	             the come out roll. If the user places them and says they are "working" bets
+	             then these bets are subject to the same rules for if a seven is rolled then
+	             these bets are lost. If a two, three or twelve are rolled then no action 
+	             is taken.
+	           - place bets by default are paid odds and can be raised lowered or taken down
+	             while the game is going on, before the roll of a seven. It is encouraged, 
+	             but not a rule that the user make place bets in certain increments to make
+	             calculating the payment easier and give the player a little more money. 
+	             So fours and tens are what ever amount. At least table minium, but encouraged
+	             in increments of 5. Five and nine are encouraged that the amount be an even
+	             number ie (10, 20, 30). Six and eight are encouraged in increments of 6
+	             ie 6, 12, 18, 24, 30 and so on. The way the odds are calculated this pays
+	             the player a little better and gets away from fractions of a dollar which 
+	             don't get paid. 
+	           - place bets can be turned off, meaning there is not action on these bets so
+	             the user neither wins or loses on them, even if the number is rolled or a 
+	             seven is rolled. 
+	             
+	One Roll Bets - Can be as little as $1 and go up to table maximum
+				  - only count for the current roll. The are normally located in the middle
+				    of the table near the stick man. They are crap check (C) or 2, 3, 12
+				    (some places push on 12, some pay it), Yo bets (E) or 11, Any Craps 
+				    (2,3, or 12), Any seven, Horn bet (2, 3, 11, 12), Aces (2), Ace duce (3)
+				    Twelve. Any of these bets can be parlayed if they win. That means take 
+				    the original bet plus the money from the win and place it back on the
+				    same number for the next roll.
+				    
+	Hard Ways - Can be as little as $1 and go up to table maximum
+	          - These are 4, 6, 8, and 10, the numbers that can have the same number on
+	            each die. so 2 and 2, 3 and 3, 4 and 4, and 5 and 5. The 6, 6 is excluded 
+	            since its considered crap dice and cannot be a point. (most of the time, I
+	            have played a table where anything except a 7 could be a point. The odds are
+	            not any better for the player.)
+	          - the player wins on these numbers if and only if the dice roll that way. In
+	            other words the dice have to show 2,2 to get paid for the hard 4. If the 
+	            dice roll a 4 any other way, the bet is lost.  The player also has the option
+	            to parlay this bet as well. The bet can be pressed (ie added to at anytime
+	            the bet is active). 
+	          - the player has the option to turn to bet off at anytime. Most of the time 
+	            these bets are turned off on the come out roll. A lot of sevens tend to 
+	            be rolled and if the bet, if active is lost if a non hard 4,6,8, or 10 are
+	            rolled. So they can be active and the player is usually asked if they want 
+	            them on or off on the come out.
+	            
+	            
+	The odds - this is where you make your money. Odds pay bonus money if bet based on the 
+	           point or number you bet on. The harder the number is to roll the higher the
+	           odds. Ie: 2,3 and 12 have the highest odds because you can only roll the 2
+	           and 12 one way. A pair of 1s or a paid of 6s, these numbers pay 31 to 1. The
+	           six and the eight on the other hand are easy to roll. You can for example 
+	           roll a six by getting a 1 & 5, 2 & 4, 3 & 3, and you have to flip it around 
+	           and say 5 & 1, 4 & 2. Its a statistics thing. The way to read these is, if I
+	           say 2 to 3, would be for every 2 dollars bet you win 3.
+	                       
+	           Pass line 1 to 1 or whats called even money.
+	           Don't pass 1 to 1
+	           
+	           Odds on numbers for pass line:
+	           4 or 10 -> 1 to 2
+	           5 or 9 ->  2 to 3
+	           6 or 8 ->  5 to 6
+	           
+	           Odds on numbers for don't pass:
+	           4 or 10 -> 2 to 1
+	           5 or 9 -> 3 to 2
+	           6 ir 8 -> 6 to 5
+	           
+	           Field Bet:
+	           2 or 12 -> 2 to 1
+	           the rest of the numbers 3,4,5,9,10, and 11 are all even money 1 to 1.
+	           
+	           Big 6 and Big 8 are 1 to 1. (not really worth betting)
+	           
+	           Place bets:
+	           Place 4 to win 9 to 5
+	           place 5 to win 7 to 5
+	           place 6 to win 7 to 6
+	           place 8 to win 7 to 6
+	           place 9 to win 7 to 5
+	           place 10 to win 9 to 5
+	           
+	           place 4 to lose 5 to 11
+	           place 5 to lose 5 to 8
+	           place 6 to lose 4 to 5
+	           place 8 to lose 4 to 5
+	           place 9 to lose 5 to 8
+	           place 10 to lose 5 to 11
+	           
+	           Buy Bets:
+	           Buy 4	2 to 1 after 5% Vig
+	           Buy 5	3 to 2 after 5% Vig
+	           Buy 6	6 to 5 after 5% Vig
+	           Buy 8	6 to 5 after 5% Vig
+	           Buy 9	3 to 2 after 5% Vig
+	           Buy 10	2 to 1 after 5% Vig
+	           
+	           Lay 4	1 to 2 minus 5% of the win
+	           Lay 5	2 to 3 minus 5% of the win
+	           Lay 6	5 to 6 minus 5% of the win
+	           Lay 8	5 to 6 minus 5% of the win
+	           Lay 9 	2 to 3 minus 5% of the win
+	           Lay 10	1 to 2 minus 5% of the win
+	           
+	           The hard ways:
+	           Hard 4	7 to 1
+	           Hard 6	9 to 1
+	           Hard 8	9 to 1
+	           Hard 10	7 to 1
+	           
+	           One roll bets:
+	           Any seven	4 to 1
+	           Any craps	7 to 1
+	           Horn 2 craps 30 to 1
+	           Horn 3 craps 15 to 1
+	           Horn 12 craps 30 to 1
+	           Horn Bet 4 way bet 2 or 12 27 to 4
+	           					  3 or 11 12 to 4
+	           C any Craps	2,3 or 12 	7 to 1
+	           E (Yo 11) 				15 to 1
+	           C & E Split 	2,3, or 12  3 to 1
+	           				11 			7 to 1
+	           
+	           
