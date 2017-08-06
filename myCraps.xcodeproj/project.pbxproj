@@ -12,6 +12,7 @@
 		7546C1D41C42E2900061DC55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7546C1D21C42E2900061DC55 /* Main.storyboard */; };
 		7546C1D61C42E2900061DC55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7546C1D51C42E2900061DC55 /* Assets.xcassets */; };
 		7546C1D91C42E2900061DC55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7546C1D71C42E2900061DC55 /* LaunchScreen.storyboard */; };
+		755586381C588616005C7CA9 /* CrapsTable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 755586371C588616005C7CA9 /* CrapsTable.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		7546C1D51C42E2900061DC55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7546C1D81C42E2900061DC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7546C1DA1C42E2900061DC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		755586371C588616005C7CA9 /* CrapsTable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CrapsTable.jpg; path = "../../../../../Volumes/Trebor's Estate/My Stuff/Downloads/CrapsTable.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				7546C1CE1C42E2900061DC55 /* AppDelegate.swift */,
 				7546C1D01C42E2900061DC55 /* ViewController.swift */,
 				7546C1D21C42E2900061DC55 /* Main.storyboard */,
+				755586371C588616005C7CA9 /* CrapsTable.jpg */,
 				7546C1D51C42E2900061DC55 /* Assets.xcassets */,
 				7546C1D71C42E2900061DC55 /* LaunchScreen.storyboard */,
 				7546C1DA1C42E2900061DC55 /* Info.plist */,
@@ -91,11 +94,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Robert N. Brown III";
 				TargetAttributes = {
 					7546C1CA1C42E2900061DC55 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -124,6 +128,7 @@
 			files = (
 				7546C1D91C42E2900061DC55 /* LaunchScreen.storyboard in Resources */,
 				7546C1D61C42E2900061DC55 /* Assets.xcassets in Resources */,
+				755586381C588616005C7CA9 /* CrapsTable.jpg in Resources */,
 				7546C1D41C42E2900061DC55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,8 +180,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -219,8 +226,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -239,6 +248,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -251,6 +261,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BootlegB.myCraps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -262,6 +273,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BootlegB.myCraps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -284,6 +296,7 @@
 				7546C1DF1C42E2900061DC55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
