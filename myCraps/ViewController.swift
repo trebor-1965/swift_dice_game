@@ -232,11 +232,6 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func quit(_ sender: AnyObject) {
-        print("Good bye")
-        return
-    }
-    
     @IBAction func dontpass(_ sender: AnyObject) {
         if (v_dontPassBet) {
             print ("Don't pass")
@@ -555,67 +550,6 @@ class ViewController: UIViewController {
         
     }
     
-
-/*    func tappedField (_ spot: UILabel) {
-        let text = spot.text!
-        
-        switch text {
-        case four:
-            spot.text?.capitalized
-        case five:
-            spot.text?.capitalized
-        case six:
-            spot.text?.capitalized
-        case eight:
-            spot.text?.capitalized
-        case nine:
-            spot.text?.capitalized
-        case ten:
-            spot.text?.capitalized
-        case odds:
-            spot.text?.capitalized
-        case come:
-            spot.text?.capitalized
-        case dc_four:
-            spot.text?.capitalized
-        case dc_five:
-            spot.text?.capitalized
-        case dc_six:
-            spot.text?.capitalized
-        case dc_eight:
-            spot.text?.capitalized
-        case dc_ten:
-            spot.text?.capitalized
-        case field:
-            spot.text?.capitalized
-        case yo:
-            spot.text?.capitalized
-        case aces:
-            spot.text?.capitalized
-        case aceDuce:
-            spot.text?.capitalized
-        case bsix:
-            spot.text?.capitalized
-        case beight:
-            spot.text?.capitalized
-        case boxCars:
-            spot.text?.capitalized
-        case passline!:
-            spot.text?.capitalized
-        case dontpass:
-            spot.text?.capitalized
-        case dontCome:
-            spot.text?.capitalized
-        case anySeven:
-            spot.text?.capitalized
-        case anyCraps:
-            spot.text?.capitalized
-        default:
-            break
-            
-        }
-    }
-*/
     
 }
 
