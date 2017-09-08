@@ -12,7 +12,6 @@
 		7546C1D41C42E2900061DC55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7546C1D21C42E2900061DC55 /* Main.storyboard */; };
 		7546C1D61C42E2900061DC55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7546C1D51C42E2900061DC55 /* Assets.xcassets */; };
 		7546C1D91C42E2900061DC55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7546C1D71C42E2900061DC55 /* LaunchScreen.storyboard */; };
-		755586381C588616005C7CA9 /* CrapsTable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 755586371C588616005C7CA9 /* CrapsTable.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		7546C1D51C42E2900061DC55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7546C1D81C42E2900061DC55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7546C1DA1C42E2900061DC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		755586371C588616005C7CA9 /* CrapsTable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = CrapsTable.jpg; path = "../../../../../Volumes/Trebor's Estate/My Stuff/Downloads/CrapsTable.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +57,6 @@
 				7546C1CE1C42E2900061DC55 /* AppDelegate.swift */,
 				7546C1D01C42E2900061DC55 /* ViewController.swift */,
 				7546C1D21C42E2900061DC55 /* Main.storyboard */,
-				755586371C588616005C7CA9 /* CrapsTable.jpg */,
 				7546C1D51C42E2900061DC55 /* Assets.xcassets */,
 				7546C1D71C42E2900061DC55 /* LaunchScreen.storyboard */,
 				7546C1DA1C42E2900061DC55 /* Info.plist */,
@@ -128,7 +125,6 @@
 			files = (
 				7546C1D91C42E2900061DC55 /* LaunchScreen.storyboard in Resources */,
 				7546C1D61C42E2900061DC55 /* Assets.xcassets in Resources */,
-				755586381C588616005C7CA9 /* CrapsTable.jpg in Resources */,
 				7546C1D41C42E2900061DC55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

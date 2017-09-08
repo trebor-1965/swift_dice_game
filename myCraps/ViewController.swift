@@ -5,13 +5,12 @@
 //  Created by Robert N. Brown III on 1/10/16.
 //  Copyright © 2016 Robert N. Brown III. All rights reserved.
 //
-
 import UIKit
 
 
 
 class ViewController: UIViewController {
-
+    
     var v_d1: String = ""
     var v_d2: String = ""
     var v_msg: String = ""
@@ -99,11 +98,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tapRec.addTarget(self, action: #selector(ViewController.tappedView(_:)))
-//        passline.isTouchInside(<#T##touches: Set<UITouch>##Set<UITouch>#>, with: <#T##UIEvent?#>)
-  //      passline.addGestureRecognizer(tapRec)
-    //    passline.isUserInteractionEnabled = true
+        //        passline.isTouchInside(<#T##touches: Set<UITouch>##Set<UITouch>#>, with: <#T##UIEvent?#>)
+        //      passline.addGestureRecognizer(tapRec)
+        //    passline.isUserInteractionEnabled = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -115,108 +114,91 @@ class ViewController: UIViewController {
         self.present(tapAlert, animated: true, completion: nil)
     }
     
-    @IBAction func rolldice () {
-        let dice1 = [1,2,3,4,5,6]
-        let dice2 = [1,2,3,4,5,6]
+   
+    //TODO: CHANGED
+    func gamble() -> (Int,Int) {
+        let dice3 = Int(arc4random_uniform(6) + 1)
+        let dice4 = Int(arc4random_uniform(6) + 1)
         
-        if v_passLineBet || v_dontPassBet {
-            func rollDice() -> (die1: Int, die2: Int) {
-            
-            func randomIndexForArrayCount(_ count: Int) -> Int {
-                return Int(arc4random_uniform(UInt32(count)))
-            }
-            
-            let randomDice1Index = randomIndexForArrayCount(dice1.count)
-            let randomDice2Index = randomIndexForArrayCount(dice2.count)
-            v_d1 = String(dice1[randomDice1Index])
-            v_d2 = String(dice2[randomDice2Index])
-            
-            return (dice1[randomDice1Index], dice2[randomDice2Index])
-            }
-
-            let roll = rollDice()
+        let roll1 = (dice3,dice4)
         
-            switch roll {
-                case (1,1),
-                     (1,2),
-                     (2,1),
-                     (6,6):
-                    v_msg1 = "Crap Dice!"
-                case (1,3),
-                     (3,1):
-                    v_msg1 = "Four!"
-                case (2,2):
-                    v_msg1 = "Little Joe!"
-                case (2,3),
-                     (3,2),
-                     (1,4),
-                     (4,1):
-                    v_msg1 = "Fever Five!"
-                case (2,4),
-                     (4,2),
-                     (1,5),
-                     (5,1):
-                    v_msg1 = "Six the easy way!"
-                case (3,3):
-                    v_msg1 = "Hard Six!"
-                case (1,6),
-                     (6,1),
-                     (3,4),
-                     (4,3),
-                     (2,5),
-                     (5,2):
-                    v_msg1 = "Seven out! Line away!" + "\n Last come get some!"
-                    v_passLineBet = false
-                case (2,6),
-                     (6,2),
-                     (3,5),
-                     (5,3):
-                    v_msg1 = "Eight, easy eight!"
-                case (4,4):
-                    v_msg1 = "Hard eight!"
-                case (4,5),
-                     (5,4),
-                     (3,6),
-                     (6,3):
-                    v_msg1 = "Nine! Center field nine!"
-                case (4,6),
-                     (6,4):
-                    v_msg1 = "Ten the big one on the end!"
-                case (5,5):
-                    v_msg1 = "Hard ten!"
-                case (6,5),
-                     (5,6):
-                    v_msg1 = "Yo Eleven!"
-                default:
-                    break
-                }
-
-        showAlert()
-            
-        } else {
-            v_msg1 = "Invalid Bet"
-            _ = UIAlertController(title: v_msg1,
-                message: "You will need to have a Pass Line or "
-                        + "\n Don't Pass Line bet"
-                        + "\n to start the game!",
-                preferredStyle: .alert)
+        switch roll1 {
+        case (1,1),
+             (1,2),
+             (2,1),
+             (6,6):
+            v_msg1 = "Crap Dice!"
+        case (1,3),
+             (3,1):
+            v_msg1 = "Four!"
+        case (2,2):
+            v_msg1 = "Little Joe!"
+        case (2,3),
+             (3,2),
+             (1,4),
+             (4,1):
+            v_msg1 = "Fever Five!"
+        case (2,4),
+             (4,2),
+             (1,5),
+             (5,1):
+            v_msg1 = "Six the easy way!"
+        case (3,3):
+            v_msg1 = "Hard Six!"
+        case (1,6),
+             (6,1),
+             (3,4),
+             (4,3),
+             (2,5),
+             (5,2):
+            v_msg1 = "Seven out! Line away!" + "\n Last come get some!"
+            v_passLineBet = false
+        case (2,6),
+             (6,2),
+             (3,5),
+             (5,3):
+            v_msg1 = "Eight, easy eight!"
+        case (4,4):
+            v_msg1 = "Hard eight!"
+        case (4,5),
+             (5,4),
+             (3,6),
+             (6,3):
+            v_msg1 = "Nine! Center field nine!"
+        case (4,6),
+             (6,4):
+            v_msg1 = "Ten the big one on the end!"
+        case (5,5):
+            v_msg1 = "Hard ten!"
+        case (6,5),
+             (5,6):
+            v_msg1 = "Yo Eleven!"
+        default:
+            break
             
         }
+        
+        
+        print("You rolled a \(roll1)")
+        return roll1
+        
+    }
+    //TODO: ? Maybe will work Finish Betting Logic
+    @IBAction func placeBet(_ sender: Any) {
+        if v_passLineBet || v_dontPassBet{
+            gamble()
+            
+        }
+        
+        
+        
     }
     
-    @IBAction func showAlert () {
-        
-        let alert = UIAlertController(title: v_msg1,
-            message: "The dice looked like: \(v_d1, v_d2)",
-            preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(action)
-        
-        present(alert, animated: true, completion: nil)
-    }
-
+    
+    
+    
+    
+    
     @IBAction func setComeOutRoll () {
         v_firstRoll = true
     }
@@ -225,7 +207,7 @@ class ViewController: UIViewController {
         v_passLineBet = true
         print("Pass line bet")
     }
-
+    
     @IBAction func passline1(_ sender: AnyObject) {
         v_passLineBet = true
         print ("Passline bet")
@@ -287,7 +269,7 @@ class ViewController: UIViewController {
         }
         
     }
-        
+    
     @IBAction func six(_ sender: AnyObject) {
         if (v_six) {
             print ("Six not bet")
@@ -311,7 +293,7 @@ class ViewController: UIViewController {
         }
         
     }
- 
+    
     @IBAction func eight(_ sender: AnyObject) {
         if (v_eight){
             print("Eight not bet")
@@ -321,7 +303,7 @@ class ViewController: UIViewController {
         }
         
     }
- 
+    
     @IBAction func nine(_ sender: AnyObject) {
         if (v_nine) {
             print("Nine not bat")
@@ -332,7 +314,7 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
     @IBAction func ten(_ sender: AnyObject) {
         if (v_ten) {
             print("Ten not bet")
@@ -343,7 +325,7 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
     @IBAction func eleven(_ sender: AnyObject) {
         if (v_eleven) {
             print("Eleven not bet")
@@ -382,7 +364,7 @@ class ViewController: UIViewController {
             v_hardFour = true
         }
     }
-
+    
     @IBAction func hardsix(_ sender: AnyObject) {
         if (v_hardSix) {
             print("Hard six not bet")
@@ -479,7 +461,7 @@ class ViewController: UIViewController {
             v_dc_Five = true
         }
     }
-
+    
     @IBAction func dc_six(_ sender: AnyObject) {
         if(v_dc_six) {
             print("Don't come six not bet")
@@ -552,4 +534,3 @@ class ViewController: UIViewController {
     
     
 }
-
